@@ -92,7 +92,7 @@ More Experimental Configs:
 - `configs/ade20k/ade20k_upernet_convnext_base_160k_parax.py`
 - `configs/ade20k/ade20k_upernet_convnext_large_160k_parax.py`
 
-Note: VMamba requires a newer ``mmcv`` version. Please use the [VMamba official repository](https://github.com/MzeroMiko/VMamba) together with [VMamba-ParaX](ParaX/models/vmamba_parax.py) for experiments.
+Note: VMamba requires a newer ``mmcv`` version. Please use the [VMamba official repository](https://github.com/MzeroMiko/VMamba) together with [VMamba-ParaX](models/vmamba_parax.py) for experiments.
 
 #### Object Detection and Instance Segmentation
 
