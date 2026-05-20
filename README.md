@@ -7,14 +7,14 @@ This is an official PyTorch implementation of "[Parameters as Experts: Adapting 
 Adapting pre-trained vision models using parameter-efficient fine-tuning (PEFT) remains challenging, as it aims to achieve performance comparable to full fine-tuning using a minimal number of trainable parameters. When applied to complex dense prediction tasks, existing methods exhibit limitations, including input-agnostic modeling and redundant cross-layer representations. To this end, we propose ParaX, a new adapter-style method featuring a simple mixture-of-experts (MoE) architecture. Specifically, we introduce shared expert centers, where each expert is a trainable parameter matrix. During a feedforward pass, each ParaX module in the network dynamically generates weight matrices tailored for the current module via a simple dynamic parameter routing mechanism, which selectively aggregates parameter matrices in the corresponding expert center. Dynamic weight matrices in ParaX modules facilitate low-rank adaptation in an input-dependent manner, thus generating more customized and powerful feature representations. Moreover, since ParaX modules across multiple network layers share the same expert center, they improve feature diversity by promoting implicit cross-layer feature interaction. Extensive experimental results demonstrate the superiority of ParaX across diverse visual recognition tasks.
 
 <p align="center">
-	<img src="assets/method.png" width="60%">
+	<img src="assets/method.png" width="80%">
 </p>
 <p align="center">
 	(a) Classical adapter-based PEFT methods. (b) Our proposed ParaX. (c) ERF and CKA comparisons of different methods.
 </p>
 
 <p align="center">
-	<img src="assets/results.png" width="95%">
+	<img src="assets/results.png" width="99%">
 </p>
 <p align="center">
 	Results of diverse vision tasks.
@@ -160,7 +160,8 @@ If you find this project useful for your research, please consider citing:
 
 ## Acknowledgments
 
-We would like to thank the following repositories for providing valuable components and resources that supported this project: [MMCV](https://github.com/open-mmlab/mmcv), [MMDet](https://github.com/open-mmlab/mmdetection), [MMSeg](https://github.com/open-mmlab/mmsegmentation), [Mona](https://github.com/leiyi-hu/mona), [AdaptFormer](https://github.com/ShoufaChen/AdaptFormer), [Swin](https://github.com/microsoft/Swin-Transformer), [ConvNext](https://github.com/facebookresearch/ConvNeXt), [VMamba](https://github.com/MzeroMiko/VMamba)
+We would like to thank the following repositories for providing valuable components and resources that supported this project:   
+[MMCV](https://github.com/open-mmlab/mmcv), [MMDet](https://github.com/open-mmlab/mmdetection), [MMSeg](https://github.com/open-mmlab/mmsegmentation), [Mona](https://github.com/leiyi-hu/mona), [AdaptFormer](https://github.com/ShoufaChen/AdaptFormer), [Swin](https://github.com/microsoft/Swin-Transformer), [ConvNext](https://github.com/facebookresearch/ConvNeXt), [VMamba](https://github.com/MzeroMiko/VMamba)
 
 ## Contact
 If you have any questions, please feel free to create an issue or contact me at ``lmzmm.0921@gmail.com``.
